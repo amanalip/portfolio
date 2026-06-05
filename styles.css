@@ -317,6 +317,10 @@ h3 {
   opacity: 0.82;
 }
 
+.skyline-moon-cutout {
+  opacity: 0;
+}
+
 .skyline-water {
   fill: #d7e8e3;
 }
@@ -371,12 +375,18 @@ h3 {
 }
 
 :root[data-theme="dark"] .skyline-sky {
-  fill: #14211d;
+  fill: #101b18;
 }
 
 :root[data-theme="dark"] .skyline-sun {
-  fill: #57c2a8;
-  opacity: 0.45;
+  fill: #f4f6ef;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 14px rgba(244, 246, 239, 0.34));
+}
+
+:root[data-theme="dark"] .skyline-moon-cutout {
+  fill: #101b18;
+  opacity: 1;
 }
 
 :root[data-theme="dark"] .skyline-water {
@@ -395,8 +405,8 @@ h3 {
 :root[data-theme="dark"] .cn-tower circle,
 :root[data-theme="dark"] .rogers-centre path:first-child,
 :root[data-theme="dark"] .rogers-centre rect {
-  fill: #eef6f2;
-  opacity: 0.9;
+  fill: #edf5ef;
+  opacity: 0.96;
 }
 
 :root[data-theme="dark"] .rogers-centre path:not(:first-child) {
@@ -410,8 +420,9 @@ h3 {
 }
 
 :root[data-theme="dark"] .skyline-windows path {
-  stroke: #101715;
-  opacity: 0.55;
+  stroke: #ffd98a;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 6px rgba(255, 217, 138, 0.75));
 }
 
 .quick-facts {
