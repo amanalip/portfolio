@@ -54,9 +54,27 @@
             <desc id="skyline-desc">Minimal skyline artwork based on recognizable downtown Toronto features: the CN Tower, Rogers Centre dome, Lake Ontario waterfront, TD Centre, First Canadian Place, Scotia Plaza, Commerce Court West, Royal Bank Plaza, and Brookfield Place.</desc>
             <rect class="skyline-sky" x="0" y="0" width="760" height="420" rx="28" fill="#edf5f1"></rect>
             <circle class="skyline-sun" cx="650" cy="86" r="34" fill="#f0a270" opacity="0.82"></circle>
-            <circle class="skyline-moon-cutout" cx="666" cy="76" r="31" fill="#edf5f1" opacity="0" visibility="hidden"></circle>
+            <g class="skyline-moon" opacity="0" visibility="hidden">
+              <circle cx="650" cy="86" r="34"></circle>
+            </g>
             <path class="skyline-water" d="M0 332 C92 315 152 346 244 328 C334 310 395 342 494 322 C590 302 658 318 760 298 L760 420 L0 420 Z" fill="#d7e8e3"></path>
             <path class="skyline-line" d="M24 307 C122 289 186 314 270 300 C356 286 420 314 514 296 C608 278 670 288 736 276" fill="none" stroke="#57a794" stroke-width="3" opacity="0.72"></path>
+
+            <g class="cn-tower" fill="#13211e">
+              <path class="cn-spire" d="M250 18 L258 18 L262 111 L246 111 Z"></path>
+              <rect class="cn-antenna" x="246" y="0" width="16" height="20" rx="3"></rect>
+              <path class="cn-shaft" d="M246 152 L262 152 L266 266 L242 266 Z"></path>
+              <path class="cn-pod" d="M213 112 L295 112 L308 138 L200 138 Z"></path>
+              <path class="cn-lower-pod" d="M224 138 L284 138 L294 160 L214 160 Z"></path>
+              <circle class="cn-ring" cx="254" cy="126" r="17"></circle>
+            </g>
+            <g class="cn-night-lights" fill="none" stroke-linecap="round" opacity="0">
+              <path class="cn-led-core" d="M254 24 L254 108 M254 160 L254 264"></path>
+              <path class="cn-led-left" d="M247 164 L244 262"></path>
+              <path class="cn-led-right" d="M261 164 L264 262"></path>
+              <path class="cn-pod-light" d="M207 126 H301"></path>
+              <circle class="cn-top-beacon" cx="254" cy="12" r="5"></circle>
+            </g>
 
             <g class="rogers-centre">
               <path d="M78 302 C88 244 145 214 220 224 C292 234 330 266 342 302 Z" fill="#13211e"></path>
@@ -78,29 +96,12 @@
                 <path d="M608 188 L650 176 L650 310 L608 310 Z"></path>
                 <path d="M656 164 L696 148 L696 310 L656 310 Z"></path>
               </g>
+              <path class="brookfield-arch" d="M704 292 C718 270 742 270 756 292 L756 310 L704 310 Z" fill="#edf5f1" opacity="0.72"></path>
               <g class="brookfield-place" aria-label="Brookfield Place-inspired twin towers">
                 <rect x="704" y="160" width="24" height="150" rx="3"></rect>
                 <rect x="734" y="182" width="22" height="128" rx="3"></rect>
-                <path d="M704 292 C718 270 742 270 756 292 L756 310 L704 310 Z" fill="#edf5f1" opacity="0.72"></path>
               </g>
               <rect x="288" y="206" width="44" height="104" rx="3"></rect>
-            </g>
-
-            <g class="cn-tower" fill="#13211e">
-              <path class="cn-spire" d="M250 18 L258 18 L262 111 L246 111 Z"></path>
-              <rect class="cn-antenna" x="246" y="0" width="16" height="20" rx="3"></rect>
-              <path class="cn-shaft" d="M246 152 L262 152 L274 318 L234 318 Z"></path>
-              <path class="cn-pod" d="M213 112 L295 112 L308 138 L200 138 Z"></path>
-              <path class="cn-lower-pod" d="M224 138 L284 138 L294 160 L214 160 Z"></path>
-              <circle class="cn-ring" cx="254" cy="126" r="17"></circle>
-              <path class="cn-base" d="M232 318 L276 318 L294 350 L214 350 Z"></path>
-            </g>
-            <g class="cn-night-lights" fill="none" stroke-linecap="round" opacity="0">
-              <path class="cn-led-core" d="M254 24 L254 108 M254 160 L254 308"></path>
-              <path class="cn-led-left" d="M247 164 L239 304"></path>
-              <path class="cn-led-right" d="M261 164 L269 304"></path>
-              <path class="cn-pod-light" d="M207 126 H301"></path>
-              <circle class="cn-top-beacon" cx="254" cy="12" r="5"></circle>
             </g>
 
             <g class="skyline-windows" fill="none" stroke="#d7e8e3" stroke-linecap="round" stroke-width="5" opacity="0.82">

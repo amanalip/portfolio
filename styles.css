@@ -317,9 +317,13 @@ h3 {
   opacity: 0.82;
 }
 
-.skyline-moon-cutout {
+.skyline-moon {
   opacity: 0;
   visibility: hidden;
+}
+
+.skyline-moon circle:first-child {
+  fill: #e5f2ee;
 }
 
 .skyline-water {
@@ -384,15 +388,18 @@ h3 {
 }
 
 :root[data-theme="dark"] .skyline-sun {
-  fill: #f4f6ef !important;
-  opacity: 0.95 !important;
-  filter: drop-shadow(0 0 14px rgba(244, 246, 239, 0.34));
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
-:root[data-theme="dark"] .skyline-moon-cutout {
-  fill: #101b18 !important;
+:root[data-theme="dark"] .skyline-moon {
   opacity: 1 !important;
   visibility: visible !important;
+  filter: drop-shadow(0 0 18px rgba(229, 242, 238, 0.2));
+}
+
+:root[data-theme="dark"] .skyline-moon circle:first-child {
+  fill: #e5f2ee !important;
 }
 
 :root[data-theme="dark"] .skyline-water {
@@ -430,7 +437,7 @@ h3 {
   opacity: 0.98 !important;
 }
 
-:root[data-theme="dark"] .brookfield-place path {
+:root[data-theme="dark"] .brookfield-arch {
   fill: #18312d !important;
   opacity: 0.84 !important;
 }
