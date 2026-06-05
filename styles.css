@@ -211,7 +211,10 @@ a {
 }
 
 .section-band {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1fr);
+  gap: clamp(28px, 5vw, 80px);
+  align-items: center;
   min-height: calc(100vh - 72px);
   padding: clamp(48px, 7vw, 92px) clamp(18px, 5vw, 72px) 44px;
 }
@@ -291,6 +294,124 @@ h3 {
   border-color: var(--accent);
   background: var(--accent);
   color: #fff;
+}
+
+.skyline-art {
+  margin: 0;
+  min-width: 0;
+}
+
+.skyline-art svg {
+  display: block;
+  width: 100%;
+  max-height: 460px;
+  filter: drop-shadow(0 24px 42px rgba(24, 33, 31, 0.1));
+}
+
+.skyline-sky {
+  fill: #edf5f1;
+}
+
+.skyline-sun {
+  fill: #f0a270;
+  opacity: 0.82;
+}
+
+.skyline-water {
+  fill: #d7e8e3;
+}
+
+.skyline-line {
+  fill: none;
+  stroke: #57a794;
+  stroke-width: 3;
+  opacity: 0.72;
+}
+
+.financial-district rect,
+.financial-district path,
+.cn-tower path,
+.cn-tower rect,
+.cn-tower circle,
+.rogers-centre path:first-child,
+.rogers-centre rect {
+  fill: #13211e;
+}
+
+.rogers-centre path:not(:first-child) {
+  fill: none;
+  stroke: #edf5f1;
+  stroke-linecap: round;
+  stroke-width: 5;
+  opacity: 0.72;
+}
+
+.fcp-tower {
+  opacity: 0.92;
+}
+
+.scotia-plaza {
+  fill: #8b3f1f;
+}
+
+.rbc-plaza {
+  opacity: 0.82;
+}
+
+.skyline-windows path {
+  fill: none;
+  stroke: #d7e8e3;
+  stroke-linecap: round;
+  stroke-width: 5;
+  opacity: 0.82;
+}
+
+:root[data-theme="dark"] .skyline-art svg {
+  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.32));
+}
+
+:root[data-theme="dark"] .skyline-sky {
+  fill: #14211d;
+}
+
+:root[data-theme="dark"] .skyline-sun {
+  fill: #57c2a8;
+  opacity: 0.45;
+}
+
+:root[data-theme="dark"] .skyline-water {
+  fill: #20312c;
+}
+
+:root[data-theme="dark"] .skyline-line {
+  stroke: #8bbdf2;
+  opacity: 0.58;
+}
+
+:root[data-theme="dark"] .financial-district rect,
+:root[data-theme="dark"] .financial-district path,
+:root[data-theme="dark"] .cn-tower path,
+:root[data-theme="dark"] .cn-tower rect,
+:root[data-theme="dark"] .cn-tower circle,
+:root[data-theme="dark"] .rogers-centre path:first-child,
+:root[data-theme="dark"] .rogers-centre rect {
+  fill: #eef6f2;
+  opacity: 0.9;
+}
+
+:root[data-theme="dark"] .rogers-centre path:not(:first-child) {
+  stroke: #101715;
+  opacity: 0.56;
+}
+
+:root[data-theme="dark"] .scotia-plaza {
+  fill: #f0a270;
+  opacity: 0.86;
+}
+
+:root[data-theme="dark"] .skyline-windows path {
+  stroke: #101715;
+  opacity: 0.55;
 }
 
 .quick-facts {
@@ -483,6 +604,10 @@ h3 {
 }
 
 @media (max-width: 980px) {
+  .section-band {
+    grid-template-columns: 1fr;
+  }
+
   .role,
   .contact-section {
     grid-template-columns: 1fr;
@@ -490,6 +615,10 @@ h3 {
 
   .section-band {
     min-height: auto;
+  }
+
+  .skyline-art {
+    max-width: 680px;
   }
 
   .quick-facts,
