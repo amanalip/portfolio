@@ -370,6 +370,10 @@ h3 {
   opacity: 0.82;
 }
 
+.cn-night-lights {
+  pointer-events: none;
+}
+
 :root[data-theme="dark"] .skyline-art svg {
   filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.32));
 }
@@ -405,8 +409,8 @@ h3 {
 :root[data-theme="dark"] .cn-tower circle,
 :root[data-theme="dark"] .rogers-centre path:first-child,
 :root[data-theme="dark"] .rogers-centre rect {
-  fill: #edf5ef;
-  opacity: 0.96;
+  fill: #0b1817;
+  opacity: 0.98;
 }
 
 :root[data-theme="dark"] .rogers-centre path:not(:first-child) {
@@ -415,14 +419,53 @@ h3 {
 }
 
 :root[data-theme="dark"] .scotia-plaza {
-  fill: #f0a270;
-  opacity: 0.86;
+  fill: #221717;
+  opacity: 0.98;
+}
+
+:root[data-theme="dark"] .rbc-plaza {
+  fill: #18201d;
+  opacity: 0.98;
+}
+
+:root[data-theme="dark"] .brookfield-place path {
+  fill: #18312d;
+  opacity: 0.84;
+}
+
+:root[data-theme="dark"] .skyline-windows {
+  opacity: 1;
 }
 
 :root[data-theme="dark"] .skyline-windows path {
-  stroke: #ffd98a;
-  opacity: 0.92;
-  filter: drop-shadow(0 0 6px rgba(255, 217, 138, 0.75));
+  stroke: #ffd76a;
+  stroke-width: 6;
+  opacity: 1;
+  filter: drop-shadow(0 0 7px rgba(255, 215, 106, 0.9));
+}
+
+:root[data-theme="dark"] .cn-night-lights {
+  opacity: 1;
+}
+
+:root[data-theme="dark"] .cn-led-core,
+:root[data-theme="dark"] .cn-led-left,
+:root[data-theme="dark"] .cn-led-right {
+  stroke: #63d7ff;
+  stroke-width: 5;
+  filter: drop-shadow(0 0 8px rgba(99, 215, 255, 0.95));
+}
+
+:root[data-theme="dark"] .cn-pod-light {
+  stroke: #f5f7ff;
+  stroke-width: 5;
+  filter: drop-shadow(0 0 10px rgba(245, 247, 255, 0.9));
+}
+
+:root[data-theme="dark"] .cn-top-beacon {
+  fill: #ff5a7d;
+  stroke: none;
+  filter: drop-shadow(0 0 9px rgba(255, 90, 125, 0.95));
 }
 
 .quick-facts {

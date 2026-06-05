@@ -25,7 +25,7 @@
       </nav>
       <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
         <span class="theme-toggle-icon" aria-hidden="true"></span>
-        <span class="theme-toggle-text">Dark</span>
+        <span class="theme-toggle-text">Dark Mode</span>
       </button>
     </header>
 
@@ -94,6 +94,13 @@
               <path class="cn-lower-pod" d="M224 138 L284 138 L294 160 L214 160 Z"></path>
               <circle class="cn-ring" cx="254" cy="126" r="17"></circle>
               <path class="cn-base" d="M232 318 L276 318 L294 350 L214 350 Z"></path>
+            </g>
+            <g class="cn-night-lights" fill="none" stroke-linecap="round" opacity="0">
+              <path class="cn-led-core" d="M254 24 L254 108 M254 160 L254 308"></path>
+              <path class="cn-led-left" d="M247 164 L239 304"></path>
+              <path class="cn-led-right" d="M261 164 L269 304"></path>
+              <path class="cn-pod-light" d="M207 126 H301"></path>
+              <circle class="cn-top-beacon" cx="254" cy="12" r="5"></circle>
             </g>
 
             <g class="skyline-windows" fill="none" stroke="#d7e8e3" stroke-linecap="round" stroke-width="5" opacity="0.82">
@@ -344,7 +351,7 @@
         const isDark = theme === "dark";
         themeToggle.setAttribute("aria-pressed", String(isDark));
         themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-        themeToggleText.textContent = isDark ? "Light" : "Dark";
+        themeToggleText.textContent = isDark ? "Light Mode" : "Dark Mode";
       }
 
       applyTheme(initialTheme);
